@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="blog@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="blog">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="ajax_test"/>
+    <schema id="4" parent="1" name="bankonline"/>
+    <schema id="5" parent="1" name="bookdb"/>
+    <schema id="6" parent="1" name="edoc_category"/>
+    <schema id="7" parent="1" name="goodsbill"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="invitationmanage"/>
+    <schema id="10" parent="1" name="invoicingsystem"/>
+    <schema id="11" parent="1" name="kgcnews"/>
+    <schema id="12" parent="1" name="loadmoney"/>
+    <schema id="13" parent="1" name="myschool"/>
+    <schema id="14" parent="1" name="mysql"/>
+    <schema id="15" parent="1" name="performance_schema"/>
+    <schema id="16" parent="1" name="projectmanage"/>
+    <schema id="17" parent="1" name="school"/>
+    <schema id="18" parent="1" name="test"/>
+    <table id="19" parent="2" name="account"/>
+    <table id="20" parent="2" name="blog">
+      <Comment>寰?崥琛</Comment>
+    </table>
+    <table id="21" parent="2" name="grade">
+      <Comment>年级表</Comment>
+    </table>
+    <table id="22" parent="2" name="result">
+      <Comment>成绩表</Comment>
+    </table>
+    <table id="23" parent="2" name="student">
+      <Comment>学生表</Comment>
+    </table>
+    <table id="24" parent="2" name="subject">
+      <Comment>科目表</Comment>
+    </table>
+    <table id="25" parent="2" name="users">
+      <Comment>鐢ㄦ埛淇℃伅琛</Comment>
+    </table>
+    <column id="26" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varbinary(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="19" name="cash">
+      <Position>3</Position>
+      <DataType>decimal(9,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="29" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="20" name="id">
+      <Position>1</Position>
+      <Comment>寰?崥id</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="20" name="content">
+      <Position>2</Position>
+      <Comment>鍐呭?</Comment>
+      <DataType>varchar(1000)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="20" name="publishtime">
+      <Position>3</Position>
+      <Comment>鍙戝竷鏃堕棿</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="20" name="userid">
+      <Position>4</Position>
+      <Comment>鐢ㄦ埛</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="34" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="21" name="gradeID">
+      <Position>1</Position>
+      <Comment>年级编号</Comment>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="21" name="gradeName">
+      <Position>2</Position>
+      <Comment>年级名</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="37" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>gradeID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="22" name="studentNo">
+      <Position>1</Position>
+      <Comment>学号</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="39" parent="22" name="subjectNo">
+      <Position>2</Position>
+      <Comment>科目编号</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="40" parent="22" name="examdate">
+      <Position>3</Position>
+      <Comment>考试日期</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="41" parent="22" name="studentResult">
+      <Position>4</Position>
+      <Comment>考试成绩</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="42" parent="23" name="studentNo">
+      <Position>1</Position>
+      <Comment>学号</Comment>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="23" name="loginPwd">
+      <Position>2</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="23" name="studentName">
+      <Position>3</Position>
+      <Comment>姓名</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="23" name="sex">
+      <Position>4</Position>
+      <Comment>性别</Comment>
+      <DataType>char(2)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;男&apos;</DefaultExpression>
+    </column>
+    <column id="46" parent="23" name="gradeID">
+      <Position>5</Position>
+      <Comment>年级编号(student表的外键用来关联grade表的主键)</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="47" parent="23" name="phone">
+      <Position>6</Position>
+      <Comment>联系电话</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="48" parent="23" name="address">
+      <Position>7</Position>
+      <Comment>地址</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <DefaultExpression>&apos;地址并详&apos;</DefaultExpression>
+    </column>
+    <column id="49" parent="23" name="bornDate">
+      <Position>8</Position>
+      <Comment>出生日期</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="50" parent="23" name="email">
+      <Position>9</Position>
+      <Comment>邮箱账号</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="51" parent="23" name="identityCard">
+      <Position>10</Position>
+      <Comment>身份证号</Comment>
+      <DataType>varchar(18)|0</DataType>
+    </column>
+    <index id="52" parent="23" name="gradeID">
+      <ColNames>gradeID</ColNames>
+    </index>
+    <index id="53" parent="23" name="identityCard">
+      <ColNames>identityCard</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>studentNo</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="55" parent="23" name="identityCard">
+      <ColNames>identityCard</ColNames>
+      <UnderlyingIndexName>identityCard</UnderlyingIndexName>
+    </key>
+    <foreign-key id="56" parent="23" name="student_ibfk_1">
+      <ColNames>gradeID</ColNames>
+      <RefSchemaName>blog</RefSchemaName>
+      <RefTableName>grade</RefTableName>
+      <RefColNames>gradeID</RefColNames>
+    </foreign-key>
+    <column id="57" parent="24" name="subjectNo">
+      <Position>1</Position>
+      <Comment>科目编号</Comment>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="58" parent="24" name="subjectName">
+      <Position>2</Position>
+      <Comment>科目名称</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="24" name="classHour">
+      <Position>3</Position>
+      <Comment>课时数量</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="60" parent="24" name="gradeID">
+      <Position>4</Position>
+      <Comment>年级编号</Comment>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <key id="61" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>subjectNo</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="62" parent="25" name="id">
+      <Position>1</Position>
+      <Comment>鐢ㄦ埛id</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="63" parent="25" name="username">
+      <Position>2</Position>
+      <Comment>鐢ㄦ埛鍚</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="25" name="password">
+      <Position>3</Position>
+      <Comment>瀵嗙爜</Comment>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="25" name="age">
+      <Position>4</Position>
+      <Comment>骞撮緞</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="25" name="sex">
+      <Position>5</Position>
+      <Comment>鎬у埆</Comment>
+      <DataType>tinyint(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="25" name="nickname">
+      <Position>6</Position>
+      <Comment>鏄电О</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="25" name="moblie">
+      <Position>7</Position>
+      <Comment>鎵嬫満</Comment>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="25" name="address">
+      <Position>8</Position>
+      <Comment>鍦板潃</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="25" name="supper">
+      <Position>9</Position>
+      <Comment>绠＄悊鍛</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="25" name="picpath">
+      <Position>10</Position>
+      <Comment>澶村儚鍚嶇О</Comment>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="72" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
